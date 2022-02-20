@@ -1,11 +1,12 @@
 import React from 'react';
 
 type Props = {
-  btnText: string;
-  lightBtnClass: string;
-  darkBtnClass: string;
-  lightBtnStyles: object;
-  darkBtnStyles: object;
+  lightBtnText?: string | JSX.Element;
+  darkBtnText?: string | JSX.Element;
+  lightBtnClass?: string;
+  darkBtnClass?: string;
+  lightBtnStyles?: object;
+  darkBtnStyles?: object;
   colorTheme: string;
   setTheme: (props: string) => void;
 };
@@ -19,7 +20,7 @@ export function ThemeButton(props: Props) {
           style={props.darkBtnStyles}
           onClick={() => props.setTheme('light')}
         >
-          {(props.btnText && props.btnText) || 'Change to Light'}
+          {(props.lightBtnText && props.lightBtnText) || 'Change to Light'}
         </button>
       ) : (
         <button
@@ -27,7 +28,7 @@ export function ThemeButton(props: Props) {
           style={props.lightBtnStyles}
           onClick={() => props.setTheme('dark')}
         >
-          {(props.btnText && props.btnText) || 'Change to Dark'}
+          {(props.darkBtnText && props.darkBtnText) || 'Change to Dark'}
         </button>
       )}
     </>
