@@ -1,6 +1,7 @@
 import React from 'react';
 
 type Props = {
+  btnText: string;
   lightBtnClass: string;
   darkBtnClass: string;
   lightBtnStyles: object;
@@ -14,19 +15,19 @@ export function ThemeButton(props: Props) {
     <>
       {props.colorTheme === 'light' ? (
         <button
-          className={props.lightBtnClass}
-          style={props.lightBtnStyles}
+          className={props.darkBtnClass}
+          style={props.darkBtnStyles}
           onClick={() => props.setTheme('light')}
         >
-          Change to Dark
+          {(props.btnText && props.btnText) || 'Change to Light'}
         </button>
       ) : (
         <button
-          className={props.darkBtnClass}
-          style={props.darkBtnStyles}
+          className={props.lightBtnClass}
+          style={props.lightBtnStyles}
           onClick={() => props.setTheme('dark')}
         >
-          Change to Light
+          {(props.btnText && props.btnText) || 'Change to Dark'}
         </button>
       )}
     </>
