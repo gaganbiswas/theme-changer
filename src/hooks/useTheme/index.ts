@@ -15,10 +15,10 @@ export function useTheme() {
     const root = window.document.documentElement;
 
     root.classList.remove(colorTheme);
-    root.classList.add(theme! && theme);
+    root.classList.add(theme!);
 
     if (typeof window !== 'undefined') {
-      localStorage.setItem('theme', theme! && theme);
+      localStorage.setItem('theme', theme!);
     }
   }, [theme]);
 
