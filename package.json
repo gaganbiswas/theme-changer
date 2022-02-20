@@ -1,9 +1,9 @@
 {
   "name": "@lovenmonsters/theme-changer",
-  "version": "1.1.0",
-  "description": "Theme changer for React and Next.js websites.",
-  "author": "gaganbiswas",
-  "license": "Apache-2.0",
+  "version": "1.1.1",
+  "description": "Theme changer for React and Next.js websites using Tailwind CSS.",
+  "author": "Gagan Biswas",
+  "license": "MIT",
   "repository": "gaganbiswas/theme-changer",
   "main": "dist/index.js",
   "engines": {
