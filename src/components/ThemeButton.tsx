@@ -11,24 +11,33 @@ type Props = {
   setTheme: (props: string) => void;
 };
 
-export function ThemeButton(props: Props) {
+export function ThemeButton({
+  lightBtnText,
+  darkBtnText,
+  lightBtnClass,
+  darkBtnClass,
+  lightBtnStyles = { color: '#000' },
+  darkBtnStyles = { color: '#fff' },
+  colorTheme,
+  setTheme,
+}: Props) {
   return (
     <>
-      {props.colorTheme === 'light' ? (
+      {colorTheme === 'light' ? (
         <button
-          className={props.darkBtnClass}
-          style={props.darkBtnStyles}
-          onClick={() => props.setTheme('light')}
+          className={darkBtnClass}
+          style={darkBtnStyles}
+          onClick={() => setTheme('light')}
         >
-          {(props.lightBtnText && props.lightBtnText) || 'Change to Light'}
+          {(lightBtnText && lightBtnText) || 'Change to Light'}
         </button>
       ) : (
         <button
-          className={props.lightBtnClass}
-          style={props.lightBtnStyles}
-          onClick={() => props.setTheme('dark')}
+          className={lightBtnClass}
+          style={lightBtnStyles}
+          onClick={() => setTheme('dark')}
         >
-          {(props.darkBtnText && props.darkBtnText) || 'Change to Dark'}
+          {(darkBtnText && darkBtnText) || 'Change to Dark'}
         </button>
       )}
     </>
