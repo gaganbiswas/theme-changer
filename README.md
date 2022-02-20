@@ -24,7 +24,7 @@ Import useTheme function from @lovenmonsters/theme-changer in your component and
 import { useTheme } from '@lovenmonsters/theme-changer';
 ```
 
-\*\*Don't forget to change darkMode to class in tailwind.config.js.
+**Don't forget to change darkMode to class in tailwind.config.js.**
 
 ## Example Code
 
