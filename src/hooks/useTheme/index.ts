@@ -1,9 +1,9 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export function useTheme() {
   const [theme, setTheme] = useState('dark');
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (typeof window !== 'undefined') {
       localStorage.getItem('theme') !== null &&
         setTheme(localStorage.getItem('theme')!);
